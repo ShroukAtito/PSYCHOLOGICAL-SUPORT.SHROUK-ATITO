@@ -4,15 +4,15 @@ A platform dedicated to providing psychological support, awareness, and self-dev
 
 ---
 
-## 📌 About the Project
+##  About the Project
 This project aims to raise psychological awareness and provide supportive content for individuals and communities.  
 It includes interactive pages, workshops, and resources to help people achieve balance between mind and self.  
 
-The goal is to promote **mental well-being**, encourage **self-development**, and build stronger, more resilient communities.
+The goal is to promote "mental well-being", encourage "self-development", and build stronger, more resilient communities.
 
 ---
 
-## ✨ Features
+##  Features
 - Homepage with main resources and links  
 - Login and Signup system  
 - Workshop area for interactive sessions  
@@ -21,7 +21,7 @@ The goal is to promote **mental well-being**, encourage **self-development**, an
 
 ---
 
-## 🛠️ Built With
+##  Built With
 - **HTML5**  
 - **CSS3**  
 - **JavaScript**  
@@ -29,7 +29,7 @@ The goal is to promote **mental well-being**, encourage **self-development**, an
 
 ---
 
-## 🚀 Installation
+##  Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/ShroukAtito/PSYCHOLOGICAL-SUPORT.SHROUK-ATITO.git
