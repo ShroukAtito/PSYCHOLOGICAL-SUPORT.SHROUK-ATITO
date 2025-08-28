@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Shrouk Atito</title>
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Create Your Account</h2>
+<form id="signupForm" action="signup.php" method="POST">
+
+      <label class="labels">Full Name</label>
+      <input type="text" placeholder="Full Name" class="inputs" name="Full_Nam" />
+
+      <label class="labels">Email</label>
+      <input type="email" placeholder="Email" class="inputs" name="Email" />
+
+      <label class="labels">Password</label>
+      <input type="password" placeholder="Password" class="inputs" name="Password" id="password" />
+      
+      <p id="strengthMessage" class="error"></p>
+      <p id="errorMsg" class="error"></p>
+
+      <button type="submit" id="signupBtn">Sign Up</button>
+      <p class="switch">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    const inputs = document.querySelectorAll(".inputs");
+    const errorMsg = document.getElementById("errorMsg");
+    const passwordInput = document.getElementById("password");
+    const strengthMessage = document.getElementById("strengthMessage");
+
+    form.addEventListener("submit", function (e) {
+      let emptyFound = false;
+
+      inputs.forEach(input => {
+        if (input.value.trim() === "") {
+          emptyFound = true;
+        }
+      });
+
+      // Password strength validation
+      const password = passwordInput.value;
+      let strength = 0;
+
+      if (password.length >= 6) strength++;
+      if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[\W_]/.test(password)) strength++;
+
+      if (emptyFound) {
+        e.preventDefault();
+        errorMsg.textContent = "Please fill in all fields before registering.";
+      } else if (strength < 3) {
+        e.preventDefault();
+        errorMsg.textContent = "The password is weak. Please choose a stronger password.";
+      } else {
+        errorMsg.textContent = "";
+      }
+    });
+
+    passwordInput.addEventListener("input", function () {
+      const password = passwordInput.value;
+      let strength = 0;
+
+      if (password.length >= 6) strength++;
+      if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[\W_]/.test(password)) strength++;
+
+      if (password.length === 0) {
+        strengthMessage.textContent = '';
+        strengthMessage.className = 'error';
+      } else if (strength <= 1) {
+        strengthMessage.textContent = 'weak';
+        strengthMessage.style.color = 'red';
+      } else if (strength === 2 || strength === 3) {
+        strengthMessage.textContent = 'middle';
+        strengthMessage.style.color = 'orange';
+      } else {
+        strengthMessage.textContent = 'strong';
+        strengthMessage.style.color = 'green';
+      }
+    });
+  </script>
+</body>
+</html>
+

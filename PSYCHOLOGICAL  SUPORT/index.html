@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" lang="Arab" lang="korea">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shrouk Atito - Psychological Support</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      <link rel="style2" href="style2.css" />
+      
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <img src="LOGO RV.png" alt="Logo" class="logo" />
+      <img src="الاسم RV.png" alt="Shrouk Atito" class="title-image" />
+    </div>
+    <nav  style="font-style: italic;">
+      <ul >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  
+ <!-- زر فتح/إغلاق القائمة -->
+<button id="menuToggle">☰ Menu</button>
+
+<!-- القائمة الجانبية -->
+<div id="sideMenu" class="side-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="contact.html">Contact</a>
+  <a href=" https://www.16personalities.com/free-personality-test  MBTI TEST" > MBTI TEST</a>
+   <a href="SPACE SHARE.HTML">SPACE SHARE</a>
+    <a href="استشارات فرديه و جماعيه">استشارات فردية و جماعية</a>
+</div>
+
+<script>
+ document.getElementById("menuToggle").addEventListener("click", function () {
+  const menu = document.getElementById("sideMenu");
+  menu.classList.toggle("active");
+});
+
+</script>
+<!-- dark-mode -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+<i id="mood" class="fa-solid fa-sun" style="cursor:pointer; font-size:24px;"></i>
+    </button>
+      <script>
+      function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      const icon = document.getElementById("modeIcon");
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    }
+  </script>
+  </header>
+  <section class="hero">
+    <div class="hero-container">
+      <div class="image-section">
+        <img src="كلها RV.png" alt="Shrouk Atito" class="image" />
+      </div>
+      <div class="text-section">
+        
+      <div id="message"></div>
+  <script>
+    function typeMessage(message, speed = 80) {
+      const target = document.getElementById("message");
+      let index = 0;
+
+      function typeLetter() {
+        if (index < message.length) {
+          target.textContent += message.charAt(index);
+          index++;
+          setTimeout(typeLetter, speed);
+        }
+      }
+
+      typeLetter();
+    }
+
+    // هنا بنستدعي الدالة عند تحميل الصفحة
+    window.onload = function () {
+      typeMessage("✨✨✨✨✨✨🍃");
+    };
+  </script>
+        <h1>Welcome to Shrouk Atito</h1>
+        <p>Your journey to balance, trust, and inner peace begins here 🌿</p>
+        <div class="auth-buttons" >
+          <a href="login.html" target="_blank"><button>Login</button></a>
+          <a href="signup.html" target="_blank"><button>Sign Up</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </script>
+  <!-- Why Us -->
+   
+  <section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <p>We offer real psychological support through modern, simplified, and stigma-free methods.</p>
+    <ul>
+      <li><i class="fas fa-heart"></i> Real-life awareness campaigns on campus and in the streets</li>
+      <li><i class="fas fa-seedling"></i> Interactive sessions using planting, art, and writing</li>
+      <li><i class="fas fa-brain"></i> Scientific content shared through attractive social media formats</li>
+      <li><i class="fas fa-hands-helping"></i> A safe and supportive environment to be your true self</li>
+    </ul>
+  </section>
+   </div>
+  <!-- Vision & Mission -->
+  <section class="vision-mission">
+    <h2>Our Vision & Mission</h2>
+    <p><strong>Vision:</strong> To become the leading source of sustainable psychological awareness in Arab cities.</p>
+    <p><strong>Mission:</strong> To create a safe and supportive space that promotes balance between mind and self through creative and unconventional initiatives.</p>
+  </section>
+
+  <!-- Our Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-boxes">
+      <div class="service">
+        <i class="fas fa-users"></i>
+        <h3>Psychological Workshops</h3>
+        <p>Interactive in-person sessions involving planting, drawing, and expressive writing.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Digital Content</h3>
+        <p>Engaging posts and videos that explain psychological concepts in simple ways.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-seedling"></i>
+        <h3>Planting Space</h3>
+        <p>Grow your own plant and watch it flourish as a form of emotional therapy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Start Your Journey With Us 🌱✨</h2>
+    <p>Sign up now or contact us if you have any questions!</p>
+    <a href="contact.html"><button>Contact Us</button></a>
+  </section>
+  </script>
+  <!-- slide show-->
+<div class="slideshow-container">
+  <img class="slide-img" src="Screenshot 2025-05-21 122110.png" alt="Slide 1">
+  <img class="slide-img" src="Screenshot 2025-05-21 122051.png" alt="Slide 2">
+  <img class="slide-img" src="Screenshot 2025-05-21 122101.png" alt="Slide 3">
+</div>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide-img');
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
+  }
+
+  // أول صورة تظهر عند الفتح
+  slides[slideIndex].classList.add('active');
+  setInterval(showSlide, 3000); // كل 3 ثواني
+</script>
+  <footer class="main-footer">
+    <p>Follow us on</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/16CqTgPQCF/" target="_blank" class="icon" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/shrouk_atito/?utm_source=qr&r=nametag" target="_blank" class="icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shrouk-atito-69673a2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" class="icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <p class="copyright">© 2025 Shrouk Atito. All rights reserved.</p>
+  </footer>
+ 
+</body>
+</html>
+
+

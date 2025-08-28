@@ -1,0 +1,301 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ebe6c9;
+    color: #272824;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #3e5650;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    width: 90px;
+    height: auto;
+  }
+  
+  .title-image {
+    width: 240px;
+    height: auto;
+    margin-top: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #dccab2;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  nav a:hover {
+    color: #55b7db;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 60px 20px;
+    background-color: #dcd8c7;
+  }
+  
+  .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .image-section,
+  .text-section {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  
+  .image {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .text-section {
+    text-align: left;
+  }
+  
+  .hero h1 {
+    color: #285876;
+    font-size: 2.5em;
+  }
+  
+  .hero p {
+    color: #3e5650;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  .auth-buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: #c8b494;
+    color: #3e5650;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background-color: #d6ae84;
+    color: #272824;
+  }
+  
+  /* Why Us Section */
+  .why-us {
+    background-color: #f4f0df;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .why-us h2 {
+    color: #285876;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .why-us p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #3e5650;
+  }
+  
+  .why-us ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .why-us li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #3e5650;
+  }
+  
+  .why-us i {
+    color: #55b7db;
+    margin-right: 10px;
+  }
+  
+  /* Vision & Mission Section */
+  .vision-mission {
+    background-color: #ebe6c9;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .vision-mission h2 {
+    font-size: 2em;
+    color: #285876;
+    margin-bottom: 20px;
+  }
+  
+  .vision-mission p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 10px auto;
+    color: #3e5650;
+  }
+  
+  /* Services Section */
+  .services {
+    background-color: #f4f0df;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2em;
+    color: #285876;
+    margin-bottom: 30px;
+  }
+  
+  .service-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .service {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 280px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service i {
+    font-size: 2em;
+    color: #55b7db;
+    margin-bottom: 15px;
+  }
+  
+  .service h3 {
+    font-size: 1.3em;
+    color: #285876;
+    margin-bottom: 10px;
+  }
+  
+  .service p {
+    font-size: 1em;
+    color: #3e5650;
+  }
+  
+  /* Call to Action */
+  .cta {
+    background-color: #dcd8c7;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .cta h2 {
+    color: #285876;
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  .cta p {
+    font-size: 1.1em;
+    color: #3e5650;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #3e5650;
+    color: #dccab2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+    }
+  
+    .image-section,
+    .text-section {
+      text-align: center;
+    }
+  
+    .text-section {
+      padding: 20px;
+    }
+  
+    .service {
+      width: 90%;
+    }
+  }
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side-menu a {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  background-color: #575757;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+}
+  

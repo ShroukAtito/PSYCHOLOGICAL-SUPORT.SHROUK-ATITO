@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Shrouk Atito</title>
+  <link rel="stylesheet" href="auth.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .strength-message {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    .weak {
+      color: red;
+    }
+    .medium {
+      color: orange;
+    }
+    .strong {
+      color: green;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Login to Your Account</h2>
+    <form id="loginForm">
+      <label class="labels" for="email">Email</label>
+      <input id="email" class="inputs" type="email" name="Email" placeholder="Email" required />
+
+      <label class="labels" for="password">Password</label>
+      <input id="password" class="inputs" type="password" name="Password" placeholder="Password" required />
+      <div id="strengthMessage" class="strength-message"></div>
+
+      <button id="sub" type="submit">Login</button>
+      <p class="switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </form>
+  </div>
+
+  <script>
+    let inputs = document.querySelectorAll('.inputs');
+    let labels = document.querySelectorAll('.labels');
+    let sub = document.getElementById("sub");
+
+    sub.onclick = (e) => {
+      e.preventDefault(); // يمنع إعادة تحميل الصفحة
+      let valid = true;
+
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value == "") {
+          labels[i].innerHTML = `Please enter${inputs[i].name}`;
+          labels[i].classList.add("error");
+          valid = false;
+        } else {
+          labels[i].innerHTML = `${inputs[i].name}`;
+          labels[i].classList.remove("error");
+        }
+      }
+
+      const strength = getPasswordStrength(inputs[1].value);
+      if (strength < 3) {
+        alert("A strong password must be entered");
+        valid = false;
+      }
+
+      if (valid) {
+        window.location.href = "home.html";
+      }
+    }
+
+    for (let j = 0; j < inputs.length; j++) {
+      inputs[j].onkeydown = () => {
+        labels[j].innerHTML = inputs[j].name;
+        labels[j].classList.remove("error");
+      }
+    }
+
+    // Password Strength Indicator
+    const passwordInput = document.getElementById('password');
+    const strengthMessage = document.getElementById('strengthMessage');
+
+    passwordInput.addEventListener('input', function () {
+      const password = passwordInput.value;
+      const strength = getPasswordStrength(password);
+
+      if (password.length === 0) {
+        strengthMessage.textContent = '';
+        strengthMessage.className = '';
+      } else if (strength <= 1) {
+        strengthMessage.textContent = 'weak !!!';
+        strengthMessage.className = 'strength-message weak';
+      } else if (strength === 2 || strength === 3) {
+        strengthMessage.textContent = 'medium';
+        strengthMessage.className = 'strength-message medium';
+      } else {
+        strengthMessage.textContent = 'strong';
+        strengthMessage.className = 'strength-message strong';
+      }
+    });
+
+    function getPasswordStrength(password) {
+      let strength = 0;
+      if (password.length >= 6) strength++;
+      if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[\W_]/.test(password)) strength++;
+      return strength;
+    }
+  </script>
+</body>
+</html>
